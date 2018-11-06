@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.0/semantic.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.0/semantic.min.js"></script>
+  <title>Sargoon Semantic-UI Modal Project</title>
+</head>
+
+<body>
+
+  <center><button class="ui button blue" id="joinUtopian" type="button" style="margin-top:400px;">Join Utopian.io Today!</button></center>
+	  <div class="ui modal joinUtopian">
+  <div class="header">
+    Utopian.io - The Open Source Economy
+  </div>
+  <div class="image content">
+    <div class="ui huge image">
+      <img src="https://i.imgur.com/GcK7r4f.png">
+    </div>
+    <div class="text">
+      <div class="ui header">Which category do you prefer to contribute to?</div>
+      <p><font size="4">Utopian aims to empower professionals in their contribution to the Open Source movement. Now everyone can be rewarded for contributing to Open Source projects.
+        Choose your favourite category and publish your contribution by following our <a href="https://join.utopian.io/guidelines/" target="_blank">Guidelines.</a></p></font>
+      <p><font size="4">Don't know how to prepare your contribution? Take a look at <a href="https://github.com/utopian-io/editor-templates" target="_blank"> the predefined editor templates</a> for each Utopian category!</p></font>
+      <img src="https://i.imgur.com/iKVL6qq.png" height="62" width="80"></img>
+    </div>
+  </div>
+  <div class="actions">
+    <button id="denybutton" type="button" class="ui negative button">I'm not interested. Don't show it again.</button>
+    <button id="approvebutton" type="button" class="ui positive button">Cool! Can't wait to make a contribution!</button>
+    
+    
+  </div>
+</div>
+  
+
+
+
+</body>
+
+</html>
+
+<script>
+
+$(document).ready(function() {
+    $("#approvebutton").click(function() {
+        alert("We're glad to hear it! Welcome to the Open Source Community!");
+    });
+});
+
+$(document).ready(function() {
+    $("#denybutton").click(function() {
+        alert("This informative text will not be shown again.");
+    });
+});
+
+$(function(){
+	$("#joinUtopian").click(function(){
+		$(".joinUtopian").modal('show');
+	});
+	$(".joinUtopian").modal({
+		closable: true
+	});
+});
+
+
+
+</script>
